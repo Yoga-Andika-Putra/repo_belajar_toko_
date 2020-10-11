@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Validator;
      
     public function detail($id_orders) 
     {         if(Orders::where('id_orders', $id_orders)->exists()) { 
-        $data_orders=Orders::where('id_orders',$id_orders)->get();         
+        $data_orders=Orders::where('id_orders',$id_orders)->get();
         return Response()->json($data_orders);   
         }         
         else 
